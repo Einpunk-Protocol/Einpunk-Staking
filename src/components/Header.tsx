@@ -9,9 +9,11 @@ const useStyles = makeStyles((theme) => ({
         gap: theme.spacing(1)
     },
     button: {
-        background: "#F97388",
+        background: "linear-gradient(360deg, #F43F5E 0%, #FDA4AF 122.97%)",
         color: "#FFF",
-        borderRadius: "10px"
+        borderRadius: "10px",
+        textTransform: "capitalize"
+
     }
 }))
 
@@ -32,7 +34,7 @@ export const Header = () => {
             ) : (
                  <Button className={classes.button}
                     onClick={() => activateBrowserWallet()}>
-                    Connnect
+                    Connect
                 </Button>
             )}
             </div>

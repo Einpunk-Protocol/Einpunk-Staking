@@ -15,11 +15,13 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: theme.spacing(4)
+        gap: theme.spacing(4),
+        marginTop: "100px"
     },
     box: {
         backgroundColor: "white",
-        borderRadius: "25px"
+        borderRadius: "25px",
+        height: "300px"
     },
     header: {
         color: "black"
