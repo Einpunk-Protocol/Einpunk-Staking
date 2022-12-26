@@ -34,7 +34,7 @@ export const Header = () => {
             ) : (
                  <Button className={classes.button}
                     onClick={() => activateBrowserWallet()}>
-                    Connect
+                    Connect Wallet
                 </Button>
             )}
             </div>
