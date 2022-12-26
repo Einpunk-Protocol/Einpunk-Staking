@@ -1,0 +1,39 @@
+{
+    "dependencies": [
+        "OpenZeppelin/openzeppelin-contracts@4.2.0",
+        "smartcontractkit/chainlink-brownie-contracts@0.2.1"
+    ],
+    "compiler": {
+        "solc": {
+            "remappings": [
+                "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.2.0",
+                "@chainlink=smartcontractkit/chainlink-brownie-contracts@0.2.1"
+            ]
+        }
+    },
+    "dotenv": ".env",
+    "dev_deployment_artifacts": true,
+    "networks": {
+        "development": {
+            "verify": false
+        },
+        "ganache": {
+            "verify": false
+        },
+        "goerli": {
+            "verify": true,
+            "weth_token": "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
+            "fau_token": "0xBA62BCfcAaFc6622853cca2BE6Ac7d845BC0f2Dc",
+            "dai_usd_price_feed": "0x0d79df66BE487753B02D015Fb622DED7f0E9798d",
+            "eth_usd_price_feed": "0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e"
+        },
+        "mainnet-fork": {
+            "weth_token": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+            "dai_usd_price_feed": "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9",
+            "eth_usd_price_feed": "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
+        }
+    },
+    "wallets": {
+        "from_key": "${PRIVATE_KEY}"
+    }
+}
