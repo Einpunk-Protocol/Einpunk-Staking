@@ -20,7 +20,7 @@ export type Token = {
 
 const useStyles = makeStyles((theme) => ({
     title: {
-        color: theme.palette.common.white,
+        color: theme.palette.common.black,
         textAlign: "center",
         padding: theme.spacing(4)
     }

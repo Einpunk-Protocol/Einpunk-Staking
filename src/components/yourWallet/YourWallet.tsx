@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "25px"
     },
     header: {
-        color: "white"
+        color: "black"
     }
 }))
 

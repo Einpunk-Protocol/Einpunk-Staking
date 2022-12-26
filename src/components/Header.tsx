@@ -7,6 +7,11 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         justifyContent: "flex-end",
         gap: theme.spacing(1)
+    },
+    button: {
+        background: "#F97388",
+        color: "#FFF",
+        borderRadius: "10px"
     }
 }))
 
@@ -25,7 +30,7 @@ export const Header = () => {
                     Disconnect
                 </Button>
             ) : (
-                 <Button color="primary" variant="contained"
+                 <Button className={classes.button}
                     onClick={() => activateBrowserWallet()}>
                     Connnect
                 </Button>
