@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Token } from "../Main"
 import { useEthers, useTokenBalance, useNotifications } from "@usedapp/core"
 import { formatUnits } from "@ethersproject/units"
-import { Button, Input, CircularProgress, Snackbar } from "@material-ui/core"
+import { Button, Input, CircularProgress, Snackbar, makeStyles } from "@material-ui/core"
 import Alert from "@material-ui/lab/Alert"
 import { useStakeTokens } from "../../hooks"
 import { utils } from "ethers"
@@ -38,7 +38,16 @@ export const StakeForm = ({ token }: StakeFormProps) => {
         setShowErc20ApprovalSuccess(false)
         setShowStakeTokenSuccess(false)
     }
-
+    const useStyles = makeStyles((theme) => ({
+        button: {
+            background: "linear-gradient(360deg, #F43F5E 0%, #FDA4AF 122.97%)",
+            color: "#FFF",
+            textTransform: "capitalize",
+            marginTop: "40px",
+            marginLeft: "30px"
+        }
+    }))
+const classes = useStyles()
     useEffect(() => {
         if (notifications.filter(
             (notification) =>
@@ -62,7 +71,8 @@ export const StakeForm = ({ token }: StakeFormProps) => {
             <div>
                 <Input
                     onChange={handleInputChange} />
-                <Button
+                    <br/>
+                <Button className={classes.button}
                     onClick={handleStakeSubmit}
                     color="primary"
                     size="large"

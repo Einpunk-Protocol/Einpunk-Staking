@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     box: {
         backgroundColor: "white",
         borderRadius: "25px",
-        height: "300px"
+        height: "400px"
     },
     header: {
         color: "black"
